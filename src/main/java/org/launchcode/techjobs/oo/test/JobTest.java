@@ -37,13 +37,15 @@ public void testSettingJobId () {
 //                          new CoreCompetency("Persistence"));
 //
 //    String spec = "Test that job class initialized all constructor parameters as required and created new objects from job fields";
+
+    // assertsTrue - is to check instance of object.method returns data type
 //
-//    assertsTrue(jobTest3 instanceof Job);
+//    assertsTrue(jobTest3.getName() instanceof String);
 //    assertsTrue(jobTest3.getEmployer() instanceof Employer);
 //    assertsTrue(jobTest3.getLocation() instanceof Location);
 //    assertsTrue(                    );
 //    assertsTrue(                    );
-//
+// assertEquals - two (expected, actual) data types and check if they are equal
 //    assertTrue("Product tester", name);
 //    assertTrue("ACME", jobTest3.getEmployer());
 //    assertTrue("Desert", jobTest3.getLocation());
@@ -75,7 +77,32 @@ public void testSettingJobId () {
 
 }
 
+public void testToStringStartsAndEndsWithNewLine () {
 
+    //establishes a new object to test against
+
+    Job jobTest6 = new Job("Product tester",
+            new Employer("ACME"),
+            new Location("Desert"),
+            new PositionType("Quality control"),
+            new CoreCompetency("Persistence"));
+
+    //establishes variables to hold string indexes of the return string object
+
+    char firstCharacter = jobTest6.toString().charAt(0);
+    char lastCharacter = jobTest6.toString().charAt(jobTest6.toString().length()-1);
+
+    //tests that the first and last character of the return string object from toString() method is "\n" for new lines
+
+    assertEquals("\n", firstCharacter);
+    assertEquals("\n", lastCharacter);
+
+
+
+
+
+
+}
 
 
 
