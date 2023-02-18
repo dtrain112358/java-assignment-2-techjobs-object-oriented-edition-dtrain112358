@@ -97,7 +97,14 @@ public class Job {
 
 
     public String toString () {
+    return "\n" +
+            "ID:" + getId() + "\n" +
+            "Name:" + getName() + "\n" +
+            "Employer:" + getEmployer() + "\n" +
+            "Location:" + getLocation() + "\n" +
+            "Position Type:" + getPositionType() + "\n" +
+            "Core Competency:" + getCoreCompetency() + "\n" +
+            "\n";
 
-
-    }
+   }
 }
