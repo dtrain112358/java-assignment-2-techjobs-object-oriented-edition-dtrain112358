@@ -16,7 +16,7 @@ public class Job {
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
-    public Job(){
+    public Job() {
         id = nextId;
         nextId++;
     }
@@ -96,16 +96,33 @@ public class Job {
     }
 
 
-    public String toString () {
+    public String toString() {
+        if (getName() == null) {
+            toString().replace(getName(), "Data not available");
+        }
+        if (getEmployer() == null) {
+            toString().replace(getEmployer().toString(), "Data not available");
+        }
+        if (getLocation() == null) {
+            toString().replace(getLocation().toString(), "Data not available");
+        }
+        if (getPositionType() == null) {
+            toString().replace(getPositionType().toString(), "Data not available");
+        }
+        if (getCoreCompetency() == null) {
+            toString().replace(getCoreCompetency().toString(), "Data not available");
+        }
 
-    return "\n" +
-            "ID:" + getId() + "\n" +
-            "Name:" + getName() + "\n" +
-            "Employer:" + getEmployer() + "\n" +
-            "Location:" + getLocation() + "\n" +
-            "Position Type:" + getPositionType() + "\n" +
-            "Core Competency:" + getCoreCompetency() + "\n" +
-            "\n";
+            return "\n" +
+                    "ID:" + getId() + "\n" +
+                    "Name:" + getName() + "\n" +
+                    "Employer:" + getEmployer() + "\n" +
+                    "Location:" + getLocation() + "\n" +
+                    "Position Type:" + getPositionType() + "\n" +
+                    "Core Competency:" + getCoreCompetency() + "\n" +
+                    "\n";
 
-   }
+        }
+    }
 }
+

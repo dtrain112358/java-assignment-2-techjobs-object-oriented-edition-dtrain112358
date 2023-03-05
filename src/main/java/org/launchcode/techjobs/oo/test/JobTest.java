@@ -30,6 +30,7 @@ public void testSettingJobId () {
 
 @Test
 public void testJobConstructorSetAllFields () {
+    
     Job jobTest3 = new Job("Product tester",
                           new Employer("ACME"),
                           new Location("Desert"),
@@ -129,20 +130,20 @@ public void testToStringStartsAndEndsWithNewLine () {
 
     }
 
-//    @Test
-//    public void testToStringHandlesEmptyField () {
-//
-//        //establishes a new object to test against
-//
-//        Job jobTest8 = new Job("Product tester",
-//                new Employer("ACME"),
-//                new Location("Desert"),
-//                new PositionType("Quality control"),
-//                new CoreCompetency("Persistence"));
-//
-//
-//
-//        assertTrue();
+    @Test
+    public void testToStringHandlesEmptyField () {
+
+        //establishes a new object to test against
+
+        Job jobTest8 = new Job();
+
+
+
+        assertEquals("Name: Data not available", jobTest8.toString());
+        assertEquals("Employer: Data not available", jobTest8.toString());
+        assertEquals("Location: Data not available", jobTest8.toString());
+        assertEquals("Position Type: Data not available", jobTest8.toString());
+        assertEquals("Core Competency: Data not available", jobTest8.toString());
 
 
 
@@ -150,8 +151,8 @@ public void testToStringStartsAndEndsWithNewLine () {
 
 
 
-
 }
+
 
 
 
