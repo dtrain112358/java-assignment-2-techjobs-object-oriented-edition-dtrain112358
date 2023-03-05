@@ -18,6 +18,10 @@ public class Employer {
         this.value = value;
     }
 
+   // public Employer(String value) {
+       // super(value);
+   // }
+
     // Custom toString, equals, and hashCode methods:
 
     @Override

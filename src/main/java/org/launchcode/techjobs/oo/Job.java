@@ -1,5 +1,6 @@
 package org.launchcode.techjobs.oo;
 
+import java.sql.SQLOutput;
 import java.util.Objects;
 
 public class Job {
@@ -122,7 +123,9 @@ public class Job {
                     "Core Competency:" + getCoreCompetency() + "\n" +
                     "\n";
 
-        }
+
     }
+
+
 }
 
